@@ -13,10 +13,6 @@ const contentTwo = document.createElement('div');
 contentTwo.classList.add('contentTwo');
 contents.appendChild(contentTwo);
 
-const footer = document.createElement('div');
-footer.classList.add('footer');
-footer.textContent = "Copyright © Adarsh Unni"
-contents.appendChild(footer)
 
 const contentTwoDotOne = document.createElement('div');
 contentTwoDotOne.classList.add('contentTwoDotOne');
@@ -46,3 +42,33 @@ buttonFour.classList.add('clear');
 buttonFour.textContent = "Clear";
 contentTwoDotOne.appendChild(buttonFour);
 
+const buttonFive = document.createElement('button');
+buttonFive.classList.add('selectSize');
+buttonFive.textContent = "Select Size";
+contentTwoDotOne.appendChild(buttonFive);
+
+let size = 16;
+buttonFive.addEventListener('click', () => {
+    size = prompt("Enter the Size")
+});
+
+let square;
+function createGrid(size){
+    for (let i=0; i<size; i++){
+        let row = document.createElement('div');
+        row.classList.add('row');
+        contentTWODotTwo.appendChild(row);
+        for (let j=0; j<size;  j++){
+            square = document.createElement('div');
+            square.classList.add('square');
+            square.textContent = "hey"
+            row.appendChild(square)
+        }
+    }
+}
+
+createGrid(size);
+
+buttonFour.addEventListener('click', () => {
+    console.log("hello")
+})
