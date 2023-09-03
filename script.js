@@ -22,6 +22,11 @@ const contentTWODotTwo = document.createElement('div');
 contentTWODotTwo.classList.add('contentTwoDotTwo');
 contentTwo.appendChild(contentTWODotTwo);
 
+const buttonTwo = document.createElement('div');
+buttonTwo.classList.add('colorMode');
+buttonTwo.textContent = "Color Mode";
+contentTwoDotOne.appendChild(buttonTwo);
+
 const buttonThree = document.createElement('button');
 buttonThree.classList.add('eraser');
 buttonThree.textContent = "Eraser";
