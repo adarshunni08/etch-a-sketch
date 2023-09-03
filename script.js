@@ -49,16 +49,22 @@ function createGrid(){
         for (let j=0; j<size;  j++){
             const square = document.createElement('div');
             square.classList.add('square');
-            square.textContent = "hey";
-            row.appendChild(square)
-            square.addEventListener('click', () => {
-                console.log("hello")
+            row.appendChild(square);
+            square.addEventListener('mousemove', () => {
+                square.style.backgroundColor = 'black';
             })
+            buttonFour.addEventListener('click', () => {
+                square.style.backgroundColor = 'white';
+            })
+            
         }
     }
 }
 
 createGrid();
+
+
+
 
 
 
