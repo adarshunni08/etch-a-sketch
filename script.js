@@ -22,7 +22,7 @@ const contentTWODotTwo = document.createElement('div');
 contentTWODotTwo.classList.add('contentTwoDotTwo');
 contentTwo.appendChild(contentTWODotTwo);
 
-const buttonTwo = document.createElement('div');
+const buttonTwo = document.createElement('button');
 buttonTwo.classList.add('colorMode');
 buttonTwo.textContent = "Color Mode";
 contentTwoDotOne.appendChild(buttonTwo);
@@ -44,9 +44,6 @@ contentTwoDotOne.appendChild(buttonFive);
 
 function createGrid(){
     let size = 16;
-    /*buttonFive.addEventListener('click', () => {
-        let size = prompt("Enter the Size")
-    });*/
     for (let i=0; i<size; i++){
         let row = document.createElement('div');
         row.classList.add('row');
@@ -55,11 +52,18 @@ function createGrid(){
             const square = document.createElement('div');
             square.classList.add('square');
             row.appendChild(square);
-            square.addEventListener('mousemove', () => {
-                square.style.backgroundColor = 'black';
+            buttonTwo.addEventListener('click', () => {
+                square.addEventListener('mousemove', () => {
+                    square.style.backgroundColor = 'black';
+                })
             })
             buttonFour.addEventListener('click', () => {
                 square.style.backgroundColor = 'white';
+            })
+            buttonThree.addEventListener('click', () => {
+                square.addEventListener('mousemove', () => {
+                    square.style.backgroundColor = 'beige';
+                })
             })
             
         }
