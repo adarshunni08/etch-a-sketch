@@ -22,11 +22,6 @@ const contentTWODotTwo = document.createElement('div');
 contentTWODotTwo.classList.add('contentTwoDotTwo');
 contentTwo.appendChild(contentTWODotTwo);
 
-const buttonOne = document.createElement('button');
-buttonOne.classList.add('color');
-buttonOne.textContent = "color";
-contentTwoDotOne.appendChild(buttonOne);
-
 const buttonTwo = document.createElement('button');
 buttonTwo.classList.add('colormode');
 buttonTwo.textContent = "Color Mode"
@@ -47,28 +42,29 @@ buttonFive.classList.add('selectSize');
 buttonFive.textContent = "Select Size";
 contentTwoDotOne.appendChild(buttonFive);
 
-let size = 16;
-buttonFive.addEventListener('click', () => {
-    size = prompt("Enter the Size")
-});
-
-let square;
-function createGrid(size){
+function createGrid(){
+    let size = 16;
+    /*buttonFive.addEventListener('click', () => {
+        let size = prompt("Enter the Size")
+    });*/
     for (let i=0; i<size; i++){
         let row = document.createElement('div');
         row.classList.add('row');
         contentTWODotTwo.appendChild(row);
         for (let j=0; j<size;  j++){
-            square = document.createElement('div');
+            const square = document.createElement('div');
             square.classList.add('square');
-            square.textContent = "hey"
+            square.textContent = "hey";
             row.appendChild(square)
+            square.addEventListener('click', () => {
+                console.log("hello")
+            })
         }
     }
 }
 
-createGrid(size);
+createGrid();
 
-buttonFour.addEventListener('click', () => {
-    console.log("hello")
-})
+
+
+
