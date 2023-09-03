@@ -37,20 +37,37 @@ buttonFour.classList.add('clear');
 buttonFour.textContent = "Clear";
 contentTwoDotOne.appendChild(buttonFour);
 
-const buttonFive = document.createElement('button');
-buttonFive.classList.add('selectSize');
-buttonFive.textContent = "Select Size";
+/*const buttonFive = document.createElement('button');
+buttonFive.classList.add('size16');
+buttonFive.textContent = "16 x 16";
 contentTwoDotOne.appendChild(buttonFive);
 
-function createGrid(){
-    let size = 16;
+const buttonSix = document.createElement('button');
+buttonSix.classList.add('size32');
+buttonSix.textContent = "32 x 32";
+contentTwoDotOne.appendChild(buttonSix);
+
+const buttonSeven = document.createElement('button');
+buttonSeven.classList.add('size64');
+buttonSeven.textContent = "64 x 64";
+contentTwoDotOne.appendChild(buttonSeven);*/
+
+const footer = document.createElement('div');
+footer.classList.add('footer');
+footer.textContent = "Copyright © Adarsh Unni "
+contents.appendChild(footer);
+
+let size = 64;
+function createGrid(size){
     for (let i=0; i<size; i++){
         let row = document.createElement('div');
         row.classList.add('row');
+        row.style.flexWrap = 'wrap';
         contentTWODotTwo.appendChild(row);
         for (let j=0; j<size;  j++){
-            const square = document.createElement('div');
+            let square = document.createElement('div');
             square.classList.add('square');
+            square.style.flexWrap = 'wrap';
             row.appendChild(square);
             buttonTwo.addEventListener('click', () => {
                 square.addEventListener('mousemove', () => {
@@ -58,19 +75,26 @@ function createGrid(){
                 })
             })
             buttonFour.addEventListener('click', () => {
-                square.style.backgroundColor = 'white';
+                square.style.backgroundColor = 'beige';
             })
             buttonThree.addEventListener('click', () => {
                 square.addEventListener('mousemove', () => {
                     square.style.backgroundColor = 'beige';
                 })
             })
-            
+            /*buttonFive.addEventListener('click', () => {
+                square.style.backgroundColor = 'beige';
+            })*/
         }
     }
 }
 
-createGrid();
+createGrid(size)
+
+
+
+
+
 
 
 
