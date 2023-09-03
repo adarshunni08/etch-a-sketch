@@ -23,7 +23,6 @@
     justify-content: center;
     align-items: center;
     gap: 80px;
-    margin-top: 50px;
 }
 body{
     background-color: aqua;
@@ -66,6 +65,7 @@ button{
     width: 640px;
     background-color: beige;
     flex-wrap: wrap;
+    margin-top: 80px;
 }
 
 .row{
@@ -78,6 +78,12 @@ button{
 .square{
     flex: 1;
     flex-wrap: wrap;
+}
+
+.footer{
+    display: flex;
+    margin-top: 80px;
+   font-weight: 700;
 }
 
 
